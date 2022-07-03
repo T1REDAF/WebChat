@@ -1,6 +1,8 @@
 package com.T1REDAF.security;
 
+import com.T1REDAF.view.login.LoginView;
 import com.vaadin.flow.spring.security.VaadinWebSecurityConfigurerAdapter;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -32,7 +34,7 @@ public class SecurityConfiguration extends VaadinWebSecurityConfigurerAdapter {
 
         // This is important to register your login view to the
         // view access checker mechanism:
-//        setLoginView(http, LoginView.class);
+        setLoginView(http, LoginView.class);
     }
 
     /**
